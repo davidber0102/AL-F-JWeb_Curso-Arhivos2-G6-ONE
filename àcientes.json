@@ -1,0 +1,28 @@
+[
+	{
+		"id" : 1,
+		"nombre" : "Daniel Fernandez",
+		"email" : "daniel.fernandez@vool.med",
+		"documento_identidad" : "11450",
+		"telefono" : "1155452",
+		"calle" : "calle 15",
+		"distrito" : "distrito 151",
+		"ciudad" : "EE UU",
+		"numero" : "18",
+		"complemento" : "a",
+		"activo" : 1
+	},
+	{
+		"id" : 2,
+		"nombre" : "Alonso David Espinoza",
+		"email" : "alonso.espinoza@gmail.com",
+		"documento_identidad" : "81950",
+		"telefono" : "1155452",
+		"calle" : "calle 15",
+		"distrito" : "distrito 151",
+		"ciudad" : "EE UU",
+		"numero" : "18",
+		"complemento" : "a",
+		"activo" : 1
+	}
+]

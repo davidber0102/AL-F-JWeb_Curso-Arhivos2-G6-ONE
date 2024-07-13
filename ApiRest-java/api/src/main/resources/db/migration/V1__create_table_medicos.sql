@@ -1,5 +1,4 @@
 create table medicos(
-
     id bigint not null auto_increment,
     nombre varchar(100) not null,
     email varchar(100) not null unique,
@@ -10,7 +9,5 @@ create table medicos(
     complemento varchar(100),
     numero varchar(20),
     ciudad varchar(100) not null,
-
     primary key(id)
-
 );

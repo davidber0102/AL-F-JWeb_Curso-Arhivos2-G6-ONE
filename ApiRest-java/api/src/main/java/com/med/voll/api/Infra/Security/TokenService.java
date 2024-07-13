@@ -5,9 +5,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.auth0.jwt.interfaces.JWTVerifier;
 import com.med.voll.api.Domain.Usuarios.Usuario;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.time.Instant;
@@ -34,7 +32,7 @@ public class TokenService {
 
     public String getSubject(String token){
         if (token == null){
-            throw new RuntimeException("token is null");
+            throw new RuntimeException();
         }
 
         DecodedJWT verifier = null;

@@ -27,7 +27,7 @@ public class SecurityFilter extends OncePerRequestFilter {
         //System.out.println("El filtro esta siendo llamado");
         //Obtener el token del header
         System.out.println("Este es el inicio del filter");
-        var authHeader = request.getHeader("Authorization");//
+        var authHeader = request.getHeader("Authorization");
         System.out.println(authHeader);
         if(authHeader != null ) {
             //System.out.println("validamos qie token no es nulll");

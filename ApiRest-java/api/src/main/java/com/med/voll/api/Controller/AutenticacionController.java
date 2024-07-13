@@ -5,6 +5,7 @@ import com.med.voll.api.Domain.Usuarios.Usuario;
 import com.med.voll.api.Domain.Usuarios.UsuarioRepository;
 import com.med.voll.api.Infra.Security.DatosJWTToken;
 import com.med.voll.api.Infra.Security.TokenService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/login")
+@Tag(name = "Autenticacion", description = "obtiene el token para el usuario asignado que da acceso al resto de endpoint")
 public class AutenticacionController {
     @Autowired
     private AuthenticationManager authenticationManager;

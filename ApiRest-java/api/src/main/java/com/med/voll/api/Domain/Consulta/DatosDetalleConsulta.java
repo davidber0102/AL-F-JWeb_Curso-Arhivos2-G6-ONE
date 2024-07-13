@@ -11,7 +11,6 @@ public record DatosDetalleConsulta(
         this(consulta.getId(),
                 consulta.getPaciente().getId(),
                 consulta.getMedico().getId(),
-                consulta.getFecha()
-        );
+                consulta.getFecha()        );
     }
 }

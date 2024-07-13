@@ -4,7 +4,6 @@ import com.med.voll.api.Domain.Direccion.Direccion;
 import jakarta.persistence.*;
 import lombok.*;
 
-
 @Table(name = "medicos")
 @Entity(name = "Medico")
 @Getter
@@ -26,7 +25,7 @@ public class Medico {
     @Embedded
     private Direccion direccion;
 
-    public Medico(DatoRegistroMedico datosRegistroMedico) {
+    public Medico(DatosRegistroMedico datosRegistroMedico) {
         this.activo = true;
         this.nombre = datosRegistroMedico.nombre();
         this.email = datosRegistroMedico.email();

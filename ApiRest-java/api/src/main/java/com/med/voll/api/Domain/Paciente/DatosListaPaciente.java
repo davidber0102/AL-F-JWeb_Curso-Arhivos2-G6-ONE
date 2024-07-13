@@ -7,6 +7,9 @@ public record DatosListaPaciente(
         String documento_identidad) {
 
     public DatosListaPaciente(Paciente paciente) {
-        this(paciente.getId(), paciente.getNombre(), paciente.getEmail(), paciente.getDocumento_identidad());
+        this(paciente.getId(),
+                paciente.getNombre(),
+                paciente.getEmail(),
+                paciente.getDocumento_identidad());
     }
 }

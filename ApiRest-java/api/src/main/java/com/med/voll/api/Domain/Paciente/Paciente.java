@@ -4,7 +4,6 @@ import com.med.voll.api.Domain.Direccion.Direccion;
 import jakarta.persistence.*;
 import lombok.*;
 
-
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,11 +16,11 @@ public class Paciente {
     private Long id;
     private String nombre;
     private String email;
-    private Boolean activo;
-    private String documento_identidad;
     private String telefono;
+    private String documento_identidad;
     @Embedded
     private Direccion direccion;
+    private Boolean activo;
 
     public Paciente(DatosRegistroPaciente datos) {
         this.activo = true;

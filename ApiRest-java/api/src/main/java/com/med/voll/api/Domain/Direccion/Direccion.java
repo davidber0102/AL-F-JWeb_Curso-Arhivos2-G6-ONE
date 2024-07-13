@@ -9,15 +9,10 @@ import lombok.*;
 public class Direccion {
 
     private String calle;
-
     private String distrito;
-
     private String ciudad;
-
     private String numero;
-
     private String complemento;
-
 
     public Direccion(DatosDireccion direccion) {
         this.calle = direccion.calle();

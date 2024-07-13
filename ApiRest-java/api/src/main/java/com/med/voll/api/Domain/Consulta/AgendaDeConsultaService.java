@@ -26,12 +26,11 @@ public class AgendaDeConsultaService {
             throw new ValidacionDeIntegridad("El Id del paciente no es encontrado, verifique");
         }
 
-        if(datos.idMedico() != null && !medicoRepository.existsById(datos.idMedico())){
+        if(datos.idMedico()!=null && !medicoRepository.existsById(datos.idMedico())){
             throw new ValidacionDeIntegridad("El Id del Medico no es encontrado, verifique");
         }
         // validaciones
         validadorDeConsultas.forEach(v -> v.validar(datos));
-
 
         var paciente = pacienteRepository.findById(datos.idPaciente()).get();
 
@@ -43,7 +42,7 @@ public class AgendaDeConsultaService {
             throw new ValidacionDeIntegridad("No existen Medicos disponibles para este horario y disponiblidad, verifique");
         }
 
-        var consulta = new Consulta(null, medico,paciente, datos.fecha());
+        var consulta = new Consulta(medico,paciente, datos.fecha());
         consultaRepository.save(consulta);
         return new DatosDetalleConsulta(consulta);
     }

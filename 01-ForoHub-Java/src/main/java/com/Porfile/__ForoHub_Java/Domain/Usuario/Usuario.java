@@ -31,8 +31,6 @@ public class Usuario implements UserDetails{
     private String email;
     @Column(nullable = false)
     private String contrasenia;
-    @Enumerated(EnumType.STRING)
-    private Tipo tipo = Tipo.ROLE_USER;
     private boolean activo;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "perfil_id")
